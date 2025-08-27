@@ -4,7 +4,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div>
+    <div className="w-11/12 max-w-3xl text-center h-screen flex flex-col items-center justify-center gap-4 mx-auto">
       <div>
         <Image src={assets.profile_img} alt="" className="rounded-full w-32" />
       </div>
@@ -16,9 +16,9 @@ const Header = () => {
         Mern stack developer
       </h1>
       <p className="max-w-2xl mx-auto font-Ovo">
-        Currently exploring MERN stack development, eager to apply my
-        knowledge,gain industry experience,and contribute as an enthusiastic
-        intern.{" "}
+        Currently I build dynamic,responsive,and scalable web applications using the MERN stack.
+        <br/>
+        “I am passionate about creating real-world applications and am currently building a full-stack web application using React, Node.js, and MongoDB.”
       </p>
       <div className="flex flex-col sm:flex-row items-center gap-2 mt-4">
         <a href="#contact" className="px-10 py-3 border border-white rounded-full bg-black text-white items-center gap-2">
