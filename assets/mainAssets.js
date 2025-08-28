@@ -92,9 +92,9 @@ export const SkillsInfo = [
       id: 1,
       title:"FocusFlow",
       description:
-        "A full-stack job portal built with the MERN stack where users can search and apply for jobs. Companies can register as admins and post job openings directly from their dashboards. The platform includes role-based access, authentication, and real-time job listings for a smooth hiring experience.",
+        "A full-stack job portal built with the MERN stack where users can search and apply for jobs. Companies can register as admins and post job openings directly from their dashboards. The platform includes role-based access, ",
       image: focusflow,
-      tags: ["NextJS", "CSS", "JavaScript", "Node.js", "MongoDB", ],
+      tags: ["NextJS", "CSS", "JavaScript", "Node.js", "MongoDB","HTML" ],
 
 
       url: "https://focusflow01.vercel.app/",
