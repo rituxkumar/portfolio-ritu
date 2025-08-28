@@ -1,4 +1,4 @@
-import { assets, infoList } from "@/assets/assets";
+import { assets, infoList, toolsData } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 
@@ -29,12 +29,20 @@ const About = () => {
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
             {infoList.map(({ icon, icondark, title, description }, index) => (
               <li
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer mt-3"
+                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer mt-3 hover:bg-gray-800 hover:-translate-y-1 duration-500 hover:text-white hover:shadow-black"
                 key={index}
               >
                 <Image src={icon} alt={title} />
                 <h3>{title}</h3>
                 <p>{description}</p>
+              </li>
+            ))}
+          </ul>
+          <h4 className="text-gray-800 my-6">Tools I play</h4>
+          <ul className="flex items-baseline gap-3 sm:gap-5">
+            {toolsData.map((tool, index) => (
+              <li className="flex justify-center items-center border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 w-12 sm:w-14 aspect-square hover:bg-gray-700" key={index}>
+                <Image src={tool} alt="Tool" className="w-5 sm:w-7" />
               </li>
             ))}
           </ul>

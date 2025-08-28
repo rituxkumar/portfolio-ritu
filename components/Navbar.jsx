@@ -1,10 +1,11 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 
 const Navbar = () => {
   const sideMenuRef = useRef();
+  const [isScroll,setIsScroll] = useState(false)
   const openMenu = () => {
     sideMenuRef.current.style.transform = "translateX(-16rem)";
   };
@@ -13,13 +14,23 @@ const Navbar = () => {
     sideMenuRef.current.style.transform = "translateX(16rem)";
   };
 
+  useEffect(()=>{
+    window.addEventListener('scroll',()=>{
+      if(scrolly > 50){
+        setIsScroll(true)
+      }else{
+        setIsScroll(false)
+      }
+    })
+  },[])
+
   return (
     <>
       <div className="top-0 right-0 w-11/12 -z-10 translate-y-[-80%] fixed">
         <Image src={assets.header_bg_color} alt="" className="w-full" />
       </div>
 
-      <nav className="items-center justify-between flex z-50 w-full fixed px-5 lg:px-[8%] py-4">
+      <nav className={`items-center justify-between flex z-50 w-full fixed px-5 lg:px-[8%] py-4 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""} `}>
         <a href="#top">
           <Image
             src={assets.logo}
@@ -36,7 +47,7 @@ const Navbar = () => {
             <a href="#about">About me</a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a href="#services">Skills</a>
           </li>
           <li>
             <a href="#work">My Work</a>
