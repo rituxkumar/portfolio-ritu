@@ -13,8 +13,8 @@ const Header = () => {
       </div>
       <div className="flex ">
       <h3>
-        Hi! I'm Ritu Kumar{" "}</h3>
-        <Image src={assets.hand_icon} alt="" className="w-6" />
+        Hi! I'm Ritu Kumar...{" "}</h3>
+        <Image src={assets.hand_icon} alt="" className="w-6 wave" />
       
       </div>
       <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">

@@ -38,14 +38,14 @@ const About = () => {
               </li>
             ))}
           </ul>
-          <h4 className="text-gray-800 my-6">Tools I play</h4>
-          <ul className="flex items-baseline gap-3 sm:gap-5">
+          {/* <h4 className="text-gray-800 my-6">Tools I play</h4> */}
+          {/* <ul className="flex items-baseline gap-3 sm:gap-5">
             {toolsData.map((tool, index) => (
               <li className="flex justify-center items-center border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 w-12 sm:w-14 aspect-square hover:bg-gray-700" key={index}>
                 <Image src={tool} alt="Tool" className="w-5 sm:w-7" />
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       </div>
     </div>

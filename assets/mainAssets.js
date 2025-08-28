@@ -25,6 +25,8 @@ import postmanLogo from "./postman.png";
 import vercelLogo from "./vercel.png";
 import nextjs from "./nextjs.png";
 
+import brainfuel from "./brainfuel.png"
+import focusflow from "./focusflow.png"
 
 export const SkillsInfo = [
   {
@@ -78,23 +80,24 @@ export const SkillsInfo = [
   export const projects = [
     {
       id: 0,
-      title: "Grocery Web App",
+      title: "BrainFuel",
       description:
         "A MERN-based Grocery Store web application where users can browse and purchase grocery items online. The platform also includes a dedicated seller dashboard, enabling vendors to manage their products, update stock, and monitor orders efficiently.",
-      // image: freshto,
+      image: brainfuel,
       tags: ["React JS", "Node.js", "MongoDB", "Express", "HTML", "Tailwind CSS", "JavaScript" , "Cloudinary"],
      
-      url: "https://freshto-app.onrender.com/",
+      url: "https://brainfuel-dun.vercel.app/",
     },
     {
       id: 1,
-      title: "JOB PORTAL",
+      title:"FocusFlow",
       description:
         "A full-stack job portal built with the MERN stack where users can search and apply for jobs. Companies can register as admins and post job openings directly from their dashboards. The platform includes role-based access, authentication, and real-time job listings for a smooth hiring experience.",
-      // image: job_portal,
-      tags: ["HTML", "CSS", "JavaScript","React JS", "Node.js", "MongoDB", "Express" ,"Redux" ,"Cloudinary"],
+      image: focusflow,
+      tags: ["NextJS", "CSS", "JavaScript", "Node.js", "MongoDB", ],
 
-      url: "https://job-portal-frontend-h1x0.onrender.com/",
+
+      url: "https://focusflow01.vercel.app/",
     },
     
    

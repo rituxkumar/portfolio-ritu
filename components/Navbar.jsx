@@ -21,7 +21,7 @@ const Navbar = () => {
 
   useEffect(()=>{
     window.addEventListener('scroll',()=>{
-      if(scroll > 50){
+      if(window.scrollY > 50){
         setIsScroll(true)
       }else{
         setIsScroll(false)
@@ -35,13 +35,22 @@ const Navbar = () => {
         <Image src={assets.header_bg_color} alt="" className="w-full" />
       </div>
 
-      <nav className={`items-center justify-between flex z-50 w-full fixed px-5 lg:px-[8%] py-4 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""} `}>
+      <nav className={`items-center justify-between flex z-50 w-full fixed px-5 lg:px-[8%] py-4 ${isScroll ? "bg-gray-00 bg-opacity-30 backdrop-blur-lg shadow-sm" : ""} `}>
         <a href="#top">
-          <Image
+          {/* <Image
             src={assets.logo}
             alt=""
             className="w-28 cursor-pointer mr-14 h-[90px]"
-          />
+          /> */}
+          {/* <h3 className="border border-gray-700 rounded-2xl px-8 text-2xl">Ritu</h3> */}
+
+
+          <div className="flex items-center justify-center ">
+  <h1 className="text-5xl font-extrabold bg-gradient-to-r from-pink-400 via-yellow-300 to-indigo-400 bg-[length:200%_200%]
+             bg-clip-text text-transparent animate-gradient-move">
+    Ritu
+  </h1>
+</div>
         </a>
 
         <ul className="hidden md:flex py-3 rounded-full px-12 gap-6 lg:gap-8 items-center bg-white shadow-sm bg-opacity-50">
