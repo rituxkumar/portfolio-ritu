@@ -2,6 +2,8 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import Button from "./Button";
+import { SkillsInfo } from "@/assets/mainAssets";
+
 
 const Navbar = () => {
   const sideMenuRef = useRef();
@@ -9,6 +11,9 @@ const Navbar = () => {
   const openMenu = () => {
     sideMenuRef.current.style.transform = "translateX(-16rem)";
   };
+ 
+  console.log(SkillsInfo);
+  
 
   const closeMenu = () => {
     sideMenuRef.current.style.transform = "translateX(16rem)";
@@ -16,7 +21,7 @@ const Navbar = () => {
 
   useEffect(()=>{
     window.addEventListener('scroll',()=>{
-      if(scrolly > 50){
+      if(scroll > 50){
         setIsScroll(true)
       }else{
         setIsScroll(false)
@@ -47,7 +52,7 @@ const Navbar = () => {
             <a href="#about">About me</a>
           </li>
           <li>
-            <a href="#services">Skills</a>
+            <a href="#Skills">Skills</a>
           </li>
           <li>
             <a href="#work">My Work</a>
@@ -115,6 +120,7 @@ const Navbar = () => {
             <a href="#contact" onClick={closeMenu}>
               Contact me
             </a>
+           
           </li>
         </ul>
       </nav>

@@ -35,15 +35,27 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import react from './react.png'
+
+import c from './c.png'
+import cpp from './cpp.png'
+import ex from './ex.png'
+import github from './github.png'
+
 
 export const assets = {
     user_image,
     code_icon,
     code_icon_dark,
+    ex,
+    c,
+    github,
+    cpp,
     edu_icon,
     edu_icon_dark,
     project_icon,
     project_icon_dark,
+    react,
     vscode,
     firebase,
     figma,
@@ -73,6 +85,7 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
+    
     right_arrow_bold_dark
 };
 
