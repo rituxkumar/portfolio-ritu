@@ -7,7 +7,7 @@ import Button from "./Button";
 const Project = () => {
   return (
     <div id="project" className="mb-10">
-      <h2 className="text-center text-5xl font-Ovo mb-8 underline">Projects</h2>
+      <h2 className="text-center text-5xl font-Ovo mb-8 underline mt-4">Projects</h2>
       <div className="flex justify-center flex-wrap gap-10 items-center ">
         {projects.map((item, index) => (
           <div

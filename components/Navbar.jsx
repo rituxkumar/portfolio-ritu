@@ -81,7 +81,10 @@ const Navbar = () => {
           >
             Contact <Image src={assets.arrow_icon} alt="" className="w-3" />
           </a> */}
-          <Button data={"Contact-me"} />
+          <div className="hidden md:flex">
+           <Button data={"Contact-me"} />
+          </div>
+         
 
           <button className="block md:hidden ml-3" onClick={openMenu}>
             <Image
