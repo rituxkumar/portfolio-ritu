@@ -1,33 +1,40 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "motion/react";
 
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+
 const Contact = () => {
-  const [result, setResult] = useState("");
-
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
-
-    formData.append("access_key", "220bc432-f9e0-4790-a565-1e0af8573916");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-
-    const data = await response.json();
-    console.log(data);
-
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
-    }
+  const [isSent, setIssent] = useState(false);
+  const [loader, setLoader] = useState(false);
+  const form = useRef();
+  const connect = (e) => {
+    e.preventDefault();
+    setLoader(true);
+    emailjs
+      .sendForm(
+        "service_skq7bkh", //service id
+        "template_ssv6k4f", //template id
+        form.current,
+        "ymiyHGxXTU_fxkRri" //public id
+      )
+      .then(
+        () => {
+          setIssent(true);
+          form.current.reset();
+          toast.success("Message send👍");
+          setLoader(false);
+          // alert("send done");
+        },
+        (error) => {
+          toast.error("failed");
+          console.error("Failed to send message:", error);
+          setLoader(false);
+          // alert("failed");
+        }
+      );
   };
 
   return (
@@ -55,7 +62,12 @@ const Contact = () => {
         I'd love to hear from you! if you have any questions,comments,or
         feedback,please use the form below.
       </motion.p>
-      <motion.form type="submit" onSubmit={onSubmit} className="max-w-2xl mx-auto">
+      <motion.form
+        ref={form}
+        type="submit"
+        onSubmit={connect}
+        className="max-w-2xl mx-auto"
+      >
         <div>
           <label className="block text-blue-400 font-medium mb-2">Name</label>
           <motion.input
@@ -68,7 +80,7 @@ const Contact = () => {
              transition duration-300 ease-in-out
              hover:border-gray-500 hover:text-black
              "
-            name="name"
+            name="user_name"
           />
           <label className="block text-blue-400 font-medium mb-2">Email</label>
           <input
@@ -114,11 +126,11 @@ const Contact = () => {
         <button
           className="py-3 px-8 w-max flex items-center  gap-2 bg-blue-500 text-white rounded-full hover:bg-black duration-500 cursor-pointer"
           type="submit"
+          onClick={connect}
         >
           Send Message{" "}
           <Image src={assets.right_arrow_white} alt="" className="w-4" />
         </button>
-        <p className="mt-4">{result}</p>
       </motion.form>
     </div>
   );
