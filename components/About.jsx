@@ -1,7 +1,7 @@
 import { assets, infoList, toolsData } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
-
+import { motion } from "motion/react";
 const About = () => {
   return (
     <div id="about" className="w-full px-[12%] py-10 scroll-mt-20 ">
@@ -9,13 +9,17 @@ const About = () => {
       <h2 className="text-center text-5xl font-Ovo">About me</h2>
 
       <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-10">
-        <div>
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+        >
           <Image
             src={assets.profile_img}
             alt="user"
             className="rounded-3xl w-full border border-amber-600"
           />
-        </div>
+        </motion.div>
         <div className="flex-1">
           <p>
             I’m a MERN Stack Developer who loves turning ideas into real-world

@@ -1,6 +1,7 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
+import { motion } from "motion/react";
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -34,20 +35,30 @@ const Contact = () => {
       id="contact"
       className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/footer-bg-color.png)] bg-no-repeat bg-center bg-[lenght:90%_auto]'
     >
-      <h4 className="text-center text-xl font-Ovo mb-2 underline">
+      <motion.h4
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+        className="text-center text-xl font-Ovo mb-2 underline"
+      >
         Connect with me
-      </h4>
-      <h2 className="text-center text-5xl font-Ovo mb-2 underline">
+      </motion.h4>
+      <motion.h2
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+        className="text-center text-5xl font-Ovo mb-2 underline"
+      >
         Get in touch
-      </h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 ">
+      </motion.h2>
+      <motion.p className="text-center max-w-2xl mx-auto mt-5 mb-12 ">
         I'd love to hear from you! if you have any questions,comments,or
         feedback,please use the form below.
-      </p>
-      <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
+      </motion.p>
+      <motion.form onSubmit={onSubmit} className="max-w-2xl mx-auto">
         <div>
           <label className="block text-blue-400 font-medium mb-2">Name</label>
-          <input
+          <motion.input
             type="text"
             placeholder="Enter your name"
             required
@@ -108,7 +119,7 @@ const Contact = () => {
           <Image src={assets.right_arrow_white} alt="" className="w-4" />
         </button>
         <p className="mt-4">{result}</p>
-      </form>
+      </motion.form>
     </div>
   );
 };

@@ -3,11 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Button from "./Button";
+import { motion } from "motion/react";
 
 const Project = () => {
   return (
     <div id="project" className="mb-10">
-      <h2 className="text-center text-5xl font-Ovo mb-8 underline mt-4">Projects</h2>
+      <motion.h2
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+        className="text-center text-5xl font-Ovo mb-8 underline mt-4"
+      >
+        Projects
+      </motion.h2>
       <div className="flex justify-center flex-wrap gap-10 items-center ">
         {projects.map((item, index) => (
           <div
@@ -18,14 +26,19 @@ const Project = () => {
             <p className="text-center text-xl">{item.title}</p>
             <Image src={item.image} alt="img" />
             <p>{item.description}</p>
-            <div className=" " onClick={()=>window.open(item.url)}>
-              <Button data="Live-demo" /> 
+            <div className=" " onClick={() => window.open(item.url)}>
+              <Button data="Live-demo" />
             </div>
             <div className="flex flex-wrap gap-2">
-              {item.tags.map((tech,index)=>
-              <p key={tech + index} className="border border-gray-800 p-1 rounded-xl hover:-translate-y-1 duration-500 cursor-pointer hover:bg-gray-300">{tech}</p>
-              )}
-              </div>
+              {item.tags.map((tech, index) => (
+                <p
+                  key={tech + index}
+                  className="border border-gray-800 p-1 rounded-xl hover:-translate-y-1 duration-500 cursor-pointer hover:bg-gray-300"
+                >
+                  {tech}
+                </p>
+              ))}
+            </div>
           </div>
         ))}
       </div>
