@@ -3,20 +3,30 @@ import Image from "next/image";
 import React from "react";
 import Button from "./Button";
 import Button2 from "./Button2";
-
+import { motion } from "motion/react"
 
 const Header = () => {
   return (
     <div className="w-11/12 max-w-3xl text-center h-screen flex flex-col items-center justify-center gap-4 mx-auto mb-[-80px] ">
-      <div>
+      <motion.div 
+      initial={{scale:0}}
+      whileInView={{scale:1}}
+      transition={{duration:0.8,type:'spring',stiffness:100}}
+      
+      >
         <Image src={assets.profile_img} alt="" className="rounded-full w-32 border-black border" />
-      </div>
-      <div className="flex ">
+      </motion.div>
+      <motion.div 
+      initial={{y:-20,opacity:0}}
+      whileInView={{y:0,opacity:1}}
+      transition={{duration:0.6,delay:0.3}}
+      
+      className="flex ">
       <h3>
         Hi! I'm Ritu Kumar...{" "}</h3>
         <Image src={assets.hand_icon} alt="" className="w-6 wave b" />
       
-      </div>
+      </motion.div>
       <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
         Mern stack developer
       </h1>
