@@ -22,8 +22,8 @@ const Project = () => {
               <Button data="Live-demo" /> 
             </div>
             <div className="flex flex-wrap gap-2">
-              {item.tags.map((tech)=>
-              <p className="border border-gray-800 p-1 rounded-xl hover:-translate-y-1 duration-500 cursor-pointer hover:bg-gray-300">{tech}</p>
+              {item.tags.map((tech,index)=>
+              <p key={tech + index} className="border border-gray-800 p-1 rounded-xl hover:-translate-y-1 duration-500 cursor-pointer hover:bg-gray-300">{tech}</p>
               )}
               </div>
           </div>
