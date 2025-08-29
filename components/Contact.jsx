@@ -55,7 +55,7 @@ const Contact = () => {
         I'd love to hear from you! if you have any questions,comments,or
         feedback,please use the form below.
       </motion.p>
-      <motion.form onSubmit={onSubmit} className="max-w-2xl mx-auto">
+      <motion.form type="submit" onSubmit={onSubmit} className="max-w-2xl mx-auto">
         <div>
           <label className="block text-blue-400 font-medium mb-2">Name</label>
           <motion.input
@@ -63,7 +63,7 @@ const Contact = () => {
             placeholder="Enter your name"
             required
             className="w-full p-3 border border-blue-400 rounded-md 
-              text-gray-200 placeholder-gray-500
+              placeholder-gray-500
              focus:outline-none focus:ring-2 focus:ring-blue-400
              transition duration-300 ease-in-out
              hover:border-gray-500 hover:text-black
@@ -89,7 +89,7 @@ const Contact = () => {
             placeholder="Enter your phone number"
             required
             className="w-full p-3 border border-blue-400 rounded-md 
-             text-gray-200 placeholder-gray-500
+              placeholder-gray-500
              focus:outline-none focus:ring-2 focus:ring-blue-400
              transition duration-300 ease-in-out
              hover:border-gray-500 hover:text-black
@@ -104,7 +104,7 @@ const Contact = () => {
             required
             rows="5"
             className="w-full p-3 border border-blue-400 rounded-md 
-              text-gray-200 placeholder-gray-500
+             placeholder-gray-500
              focus:outline-none focus:ring-2 focus:ring-blue-400
              transition duration-300 ease-in-out
              hover:border-gray-500 hover:text-black"
@@ -112,7 +112,7 @@ const Contact = () => {
           />
         </div>
         <button
-          className="py-3 px-8 w-max flex items-center  gap-2 bg-black/80 text-white rounded-full hover:bg-blue-500 duration-500 cursor-pointer"
+          className="py-3 px-8 w-max flex items-center  gap-2 bg-blue-500 text-white rounded-full hover:bg-black duration-500 cursor-pointer"
           type="submit"
         >
           Send Message{" "}

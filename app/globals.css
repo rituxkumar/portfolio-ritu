@@ -1,30 +1,33 @@
 @import "tailwindcss";
 
-*{
+* {
   font-family: Outfit;
 }
 
+.button-wrapper::before {
+  animation: spin-gradient 4s linear infinite;
+}
 
+@keyframes spin-gradient {
+  from {
+    transform: rotate(0deg);
+  }
 
- .button-wrapper::before {
-                    animation: spin-gradient 4s linear infinite;
-                }
-            
-                @keyframes spin-gradient {
-                    from {
-                        transform: rotate(0deg);
-                    }
-            
-                    to {
-                        transform: rotate(360deg);
-                    }
-                }
-
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 @keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Use a utility-friendly name so you can also move this into your Tailwind @layer components */
@@ -32,6 +35,63 @@
   animation: gradientMove 6s ease-in-out infinite;
 }
 
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.wave {
+  display: inline-block;
+  animation: wave 4s infinite;
+  transform-origin: 70% 70%;
+}
 
 
-@keyframes wave { 0% { transform: rotate(0deg); } 10% { transform: rotate(14deg); } 20% { transform: rotate(-8deg); } 30% { transform: rotate(14deg); } 40% { transform: rotate(-4deg); } 50% { transform: rotate(10deg); } 60% { transform: rotate(0deg); } 100% { transform: rotate(0deg); } } .wave { display: inline-block; animation: wave 4s infinite; transform-origin: 70% 70%; }
+
+[data-theme="dark"] {
+  --background: #000000;
+  --text: #ffffff;
+}
+
+:root {
+  --background: #ffffff;
+  --text: #000000;
+  --button-bg: #4285f4; /* Google Blue */
+  --button-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --background: #000000;
+  --text: #ffffff;
+  --button-bg: #ffffff; /* Make Google button white in dark mode */
+  --button-text: #000000;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  font-family: sans-serif;
+}
+
