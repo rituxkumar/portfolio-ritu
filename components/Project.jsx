@@ -12,7 +12,7 @@ const Project = () => {
         {projects.map((item, index) => (
           <div
             key={index}
-            className="w-full md:w-[30%] p-6 rounded-xl border border- transition duration-300 
+            className="w-[80%] md:w-[30%] p-6 rounded-xl border border- transition duration-300 
                 hover:shadow-2xl hover:shadow-black/70 hover:ring-2 hover:ring-gray-800/70 hover:ring-offset-2 hover:ring-offset-black/30 hover:translate-y-1 border-gray-600 "
           >
             <p className="text-center text-xl">{item.title}</p>

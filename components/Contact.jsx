@@ -3,7 +3,6 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 const Contact = () => {
-
   const [result, setResult] = useState("");
 
   const onSubmit = async (event) => {
@@ -15,10 +14,11 @@ const Contact = () => {
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData
+      body: formData,
     });
 
     const data = await response.json();
+    console.log(data);
 
     if (data.success) {
       setResult("Form Submitted Successfully");
@@ -46,7 +46,7 @@ const Contact = () => {
       </p>
       <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
         <div>
-           <label className="block text-blue-400 font-medium mb-2">Name</label>
+          <label className="block text-blue-400 font-medium mb-2">Name</label>
           <input
             type="text"
             placeholder="Enter your name"
@@ -56,21 +56,23 @@ const Contact = () => {
              focus:outline-none focus:ring-2 focus:ring-blue-400
              transition duration-300 ease-in-out
              hover:border-gray-500 hover:text-black
-             " name="name"
+             "
+            name="name"
           />
-           <label className="block text-blue-400 font-medium mb-2">Email</label>
+          <label className="block text-blue-400 font-medium mb-2">Email</label>
           <input
             className="w-full p-3 border border-blue-400 rounded-md 
               text-gray-200 placeholder-gray-500
              focus:outline-none focus:ring-2 focus:ring-blue-400
              transition duration-300 ease-in-out
              hover:border-gray-500 hover:text-black
-             " name="email"
+             "
+            name="email"
             type="text"
             placeholder="Enter your email"
             required
           />
-           <label className="block text-blue-400 font-medium mb-2">Phone</label>
+          <label className="block text-blue-400 font-medium mb-2">Phone</label>
           <input
             type="tel"
             placeholder="Enter your phone number"
@@ -80,22 +82,31 @@ const Contact = () => {
              focus:outline-none focus:ring-2 focus:ring-blue-400
              transition duration-300 ease-in-out
              hover:border-gray-500 hover:text-black
-             "name="phone"
+             "
+            name="phone"
           />
-          <label className="block text-blue-400 font-medium mb-2">Message</label>
-<textarea
-  placeholder="Enter your message"
-  required
-  rows="5"
-  className="w-full p-3 border border-yellow-400 rounded-md 
+          <label className="block text-blue-400 font-medium mb-2">
+            Message
+          </label>
+          <textarea
+            placeholder="Enter your message"
+            required
+            rows="5"
+            className="w-full p-3 border border-blue-400 rounded-md 
               text-gray-200 placeholder-gray-500
              focus:outline-none focus:ring-2 focus:ring-blue-400
              transition duration-300 ease-in-out
-             hover:border-gray-500 hover:text-black" name="message"
-/>
-
+             hover:border-gray-500 hover:text-black"
+            name="message"
+          />
         </div>
-        <button className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 cursor-pointer" type="submit">Send Message <Image src={assets.right_arrow_white} alt='' className="w-4"/></button>
+        <button
+          className="py-3 px-8 w-max flex items-center  gap-2 bg-black/80 text-white rounded-full hover:bg-blue-500 duration-500 cursor-pointer"
+          type="submit"
+        >
+          Send Message{" "}
+          <Image src={assets.right_arrow_white} alt="" className="w-4" />
+        </button>
         <p className="mt-4">{result}</p>
       </form>
     </div>

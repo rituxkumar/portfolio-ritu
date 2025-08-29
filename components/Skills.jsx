@@ -5,7 +5,7 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div id="Skills" className="scroll-mt-20 py-10 w-full px-[12%]">
+    <div id="Skills" className="scroll-mt-20 md:py-10 w-full md:px-[12%]">
       {/* <h4 className="text-center mb-2 text-lg font-Ovo ">Introduction</h4> */}
       <h2 className="text-center text-5xl font-Ovo mb-8 underline">
         My-Skills
@@ -18,7 +18,7 @@ const Skills = () => {
           {SkillsInfo.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col border-2 border-gray-400 w-[70%] md:w-[40%] p-5 rounded-xl hover:translate-y-1 duration-500 hover:border-gray-950 "
+              className="flex flex-col border-2 border-gray-400 w-[75%] md:w-[40%] p-5 rounded-xl hover:translate-y-1 duration-500 hover:border-gray-950 "
             >
               <p className="items-center text-center text-2xl text-blue-700 mb-2 ">
                 {" "}
