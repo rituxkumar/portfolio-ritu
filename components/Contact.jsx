@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import Loader from "./Loader";
 
 const Contact = () => {
   const [isSent, setIssent] = useState(false);
@@ -13,6 +14,9 @@ const Contact = () => {
   const connect = (e) => {
     e.preventDefault();
     setLoader(true);
+
+ 
+    
     emailjs
       .sendForm(
         "service_skq7bkh", //service id
@@ -112,8 +116,8 @@ const Contact = () => {
             Message
           </label>
           <textarea
-            placeholder="Enter your message"
             required
+            placeholder="Enter your message"
             rows="5"
             className="w-full p-3 border border-blue-400 rounded-md 
              placeholder-gray-500
@@ -123,14 +127,18 @@ const Contact = () => {
             name="message"
           />
         </div>
-        <button
-          className="py-3 px-8 w-max flex items-center  gap-2 bg-blue-500 text-white rounded-full hover:bg-black duration-500 cursor-pointer"
-          type="submit"
-          onClick={connect}
-        >
-          Send Message{" "}
-          <Image src={assets.right_arrow_white} alt="" className="w-4" />
-        </button>
+        {loader ? (
+          <Loader />
+        ) : (
+          <button
+            className="py-3 px-8 w-max flex items-center  gap-2 bg-blue-500 text-white rounded-full hover:bg-black duration-500 cursor-pointer"
+            type="submit"
+            onClick={connect}
+          >
+            Send Message{" "}
+            <Image src={assets.right_arrow_white} alt="" className="w-4" />
+          </button>
+        )}
       </motion.form>
     </div>
   );
