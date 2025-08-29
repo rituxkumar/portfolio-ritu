@@ -7,14 +7,14 @@ import Button2 from "./Button2";
 
 const Header = () => {
   return (
-    <div className="w-11/12 max-w-3xl text-center h-screen flex flex-col items-center justify-center gap-4 mx-auto">
+    <div className="w-11/12 max-w-3xl text-center h-screen flex flex-col items-center justify-center gap-4 mx-auto mb-[-80px] ">
       <div>
         <Image src={assets.profile_img} alt="" className="rounded-full w-32 border-black border" />
       </div>
       <div className="flex ">
       <h3>
         Hi! I'm Ritu Kumar...{" "}</h3>
-        <Image src={assets.hand_icon} alt="" className="w-6 wave" />
+        <Image src={assets.hand_icon} alt="" className="w-6 wave b" />
       
       </div>
       <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
