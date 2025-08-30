@@ -29,7 +29,7 @@ const Header = () => {
       whileInView={{y:0,opacity:1}}
       transition={{duration:0.6,delay:0.3}}
       >
-        Hi! I'm Ritu Kumar...{" "}</motion.h3>
+        Hi! I'm Ritu Kumar...!!!</motion.h3>
         <Image src={assets.hand_icon} alt="" className="w-6 wave b" />
       
       </motion.div>

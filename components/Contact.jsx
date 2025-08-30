@@ -66,7 +66,7 @@ const Contact = () => {
         I'd love to hear from you! if you have any questions,comments,or
         feedback,please use the form below.
       </motion.p>
-      <motion.form
+      <form
         ref={form}
         type="submit"
         onSubmit={connect}
@@ -74,7 +74,7 @@ const Contact = () => {
       >
         <div>
           <label className="block text-blue-400 font-medium mb-2">Name</label>
-          <motion.input
+          <input
             type="text"
             placeholder="Enter your name"
             required
@@ -139,7 +139,7 @@ const Contact = () => {
             <Image src={assets.right_arrow_white} alt="" className="w-4" />
           </button>
         )}
-      </motion.form>
+      </form>
     </div>
   );
 };
