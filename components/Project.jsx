@@ -12,7 +12,7 @@ const Project = () => {
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-        className="text-center text-5xl font-Ovo mb-8 underline mt-4"
+        className="text-center text-5xl font-Ovo mb-8 underline mt-4 "
       >
         Projects
       </motion.h2>

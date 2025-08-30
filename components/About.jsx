@@ -12,7 +12,7 @@ const About = () => {
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
       
       
-      className="text-center text-5xl font-Ovo">About me</motion.h2>
+      className="text-center text-5xl font-Ovo underline">About me</motion.h2>
 
       <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-10">
         <motion.div

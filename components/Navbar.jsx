@@ -73,7 +73,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4">
           <button>
-            <Image src={assets.moon_icon} alt="" className="w-6" />
+            {/* <Image src={assets.moon_icon} alt="" className="w-6" /> */}
           </button>
           {/* <a
             href="#contact"
@@ -82,7 +82,7 @@ const Navbar = () => {
             Contact <Image src={assets.arrow_icon} alt="" className="w-3" />
           </a> */}
           <div className="hidden md:flex">
-           <Button data={"Contact-me"} />
+           <Button data={"Contact-me"}  />
           </div>
          
 
