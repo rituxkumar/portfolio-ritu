@@ -16,7 +16,7 @@ const Project = () => {
       >
         Projects
       </motion.h2>
-      <div className="flex justify-center flex-wrap gap-10 items-center ">
+      <div className="flex justify-center flex-wrap gap-20 items-center ">
         {projects.map((item, index) => (
           <div
             key={index}
