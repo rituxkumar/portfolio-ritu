@@ -108,7 +108,7 @@ export const SkillsInfo = [
       description:
         "Course Selling [ StudyLoom 🚀]full-stack web application built using MongoDB, Express.js, React, and Node.js that enables instructors to create and manage courses while allowing students to browse, purchase, and learn seamlessly. The platform features secure authentication. ",
       image: StudyLoom,
-      tags: ["Express","Cloudinary", "CSS", "JavaScript", "Node.js", "MongoDB","HTML","React JS" ],
+      tags: ["Express","Cloudinary", "Tailwind-CSS", "JavaScript", "Node.js", "MongoDB","HTML","React JS" ],
 
 
       url: "https://ed-tech-eta-five.vercel.app/",
