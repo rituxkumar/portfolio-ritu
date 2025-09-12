@@ -83,7 +83,7 @@ export const SkillsInfo = [
       id: 0,
       title: "BrainFuel",
       description:
-        "A MERN-based Grocery Store web application where users can browse and purchase grocery items online. The platform also includes a dedicated seller dashboard, enabling vendors to manage their products, update stock, and monitor orders efficiently.",
+        "AI-Powered Blog Website -Developed a full-stack blog platform (MERN) where users can create and explore blogs on interesting topics, generate content using AI, and engage through an interactive comment system with secure authentication.",
       image: brainfuel,
       tags: ["React JS", "Node.js", "MongoDB", "Express", "HTML", "Tailwind CSS", "JavaScript" , "Cloudinary"],
      
@@ -93,7 +93,7 @@ export const SkillsInfo = [
       id: 1,
       title:"FocusFlow",
       description:
-        "A full-stack job portal built with the MERN stack where users can search and apply for jobs. Companies can register as admins and post job openings directly from their dashboards. The platform includes role-based access, ",
+        "To-Do App-(Next.js) – Built a task management application with a modern, responsive UI using Next.js. Designed an intuitive interface for adding, updating, and deleting tasks with real-time state management. Focused on a clean, minimal UI/UX for smooth user experience and efficient task organization, ",
       image: focusflow,
       tags: ["NextJS", "Tailwind-CSS", "JavaScript", "Node.js", "MongoDB","HTML" ],
 
