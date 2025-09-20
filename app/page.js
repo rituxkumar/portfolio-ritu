@@ -2,6 +2,7 @@
 
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import { FloatingDockDemo } from "@/components/FloatingDockDemo";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
@@ -22,6 +23,7 @@ export default function Home() {
       <Project />
       <Contact />
       <Footer />
+      <FloatingDockDemo />
     </>
   );
 }
