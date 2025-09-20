@@ -27,7 +27,7 @@ export function FloatingDockDemo() {
       icon: (
         <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://shorturl.at/GM5RT",
     },
     {
       title: "E-mail",
@@ -63,6 +63,7 @@ export function FloatingDockDemo() {
       ),
       href: "https://x.com/rituxkumar",
     },
+
     {
       title: "GitHub",
       icon: (

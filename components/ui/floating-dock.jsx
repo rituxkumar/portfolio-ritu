@@ -29,7 +29,7 @@ const FloatingDockMobile = ({
 }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={cn("relative  md:hidden flex flex-col items-center  mx-auto", className)}>
+    <div className={cn("relative  md:hidden flex flex-col items-center mb-4  mx-auto", className)}>
       <AnimatePresence>
         {open && (
           <motion.div
