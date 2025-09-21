@@ -27,7 +27,7 @@ export function FloatingDockDemo() {
       icon: (
         <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "https://shorturl.at/GM5RT",
+      href: "https://www.linkedin.com/in/rituxkumar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
       title: "E-mail",
